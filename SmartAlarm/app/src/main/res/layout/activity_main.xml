@@ -13,7 +13,7 @@
 
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_weight="4"
             android:layout_height="200dp">
 
@@ -54,7 +54,7 @@
             android:layout_weight="3">
 
             <TextView
-                android:id="@+id/weather_time"
+                android:id="@+id/time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -66,7 +66,7 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_below="@id/weather_time"
+                android:layout_below="@id/time"
                 android:paddingTop="10dp"
                 android:src="@drawable/coffee_icon"
                 android:id="@+id/coffee_image"
