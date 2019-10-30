@@ -1,12 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="25dp">
 
     <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SETTINGS"
+        android:textSize="65sp"
+        android:textColor="@color/text1"
+        android:maxLines="1"/>
+
+
+    <TextView
+        android:id="@+id/mqtt_ip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings"
-        android:layout_centerInParent="true"/>
+        android:layout_below="@+id/title"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:text="MQTT IP Address"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/mqtt_ip_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mqtt_ip" />
+
+    <TextView
+        android:id="@+id/mqtt_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mqtt_ip_input"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:text="MQTT Topic"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/mqtt_topic_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mqtt_topic" />
+
+    <TextView
+        android:id="@+id/coffee_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mqtt_topic_input"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:text="Minutes to start coffee making before alarm"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/coffee_time_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/coffee_time" />
+
+
+
+
+
+
 
 </RelativeLayout>

@@ -12,10 +12,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainActivity extends AppCompatActivity {
-
-
     BottomNavigationView navigationView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.nav_bar);
         navigationView.setOnNavigationItemSelectedListener(navListener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
     }
 
@@ -53,9 +50,11 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Pressed settings", Toast.LENGTH_SHORT).show();
                     selectedFragment = new SettingsFragment();
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + id);
             }
 
-            if(selectedFragment != null) {
+            if (selectedFragment != null) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
             }
             return true;
