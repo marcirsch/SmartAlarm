@@ -1,88 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_bar"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:baselineAligned="false">
+        android:animateLayoutChanges="true"
+        app:itemTextAppearanceActive="@style/menuText"
+        app:itemTextAppearanceInactive="@style/menuText"
+        app:menu="@menu/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        android:background="?android:windowBackground"/>
 
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="200dp">
-
-
-            <ImageView
-                android:id="@+id/weather_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/weather_sun_cloud_rain" />
-
-            <TextView
-                android:id="@+id/weather_temperature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/weather_image"
-                android:layout_centerHorizontal="true"
-                android:text="21°C"
-                android:textColor="@color/text1"
-                android:textSize="50sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/weather_city"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/weather_temperature"
-                android:layout_centerHorizontal="true"
-                android:text="Budapest" />
-
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:layout_weight="3">
-
-            <TextView
-                android:id="@+id/time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="16:00"
-                android:textColor="@color/text1"
-                android:textSize="50sp"
-                android:textStyle="bold"
-                android:maxLines="1"/>
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_below="@id/time"
-                android:paddingTop="10dp"
-                android:src="@drawable/coffee_icon"
-                android:id="@+id/coffee_image"
-                android:layout_centerHorizontal="true"
-                android:visibility="visible"
-                android:contentDescription="@string/coffee_description"/>
-
-
-        </RelativeLayout>
-
-
-    </LinearLayout>
 
 
 </RelativeLayout>

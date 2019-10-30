@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ALARM"
+        android:textSize="70sp"
+        android:textColor="@color/text1"
+        android:layout_margin="30dp"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/title"
+        android:layout_alignBaseline="@+id/title"/>
+
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:timePickerMode="spinner"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/weekdays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_picker"
+        android:layout_marginVertical="20dp">
+
+        <ImageView
+            android:id="@+id/monday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/monday_icon"
+            android:layout_marginHorizontal="10dp"/>
+
+        <ImageView
+            android:id="@+id/tuesday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/tuesday_icon"
+            android:layout_marginHorizontal="10dp"/>
+
+        <ImageView
+            android:id="@+id/wednesday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/wednesday_icon"
+            android:layout_marginHorizontal="10dp"/>
+
+        <ImageView
+            android:id="@+id/thursday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/thursday_icon"
+            android:layout_marginHorizontal="10dp"/>
+        <ImageView
+            android:id="@+id/friday"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/friday_icon"
+            android:layout_marginHorizontal="10dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weekdays">
+
+        <CheckBox
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make coffee"
+            android:textColor="@color/text1"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

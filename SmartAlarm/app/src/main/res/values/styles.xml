@@ -8,4 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="menuText">14sp</style>
+    <style name="homeTextSize">25sp</style>
+
 </resources>

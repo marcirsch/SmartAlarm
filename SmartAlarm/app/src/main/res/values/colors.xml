@@ -7,4 +7,5 @@
     <color name="bg">#f3f3f3</color>
     <color name="text1">#000000</color>
     <color name="text2">#ffffff</color>
+    <color name="nav_bar">#E2959BBB</color>
 </resources>
