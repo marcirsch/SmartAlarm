@@ -35,19 +35,19 @@ public class MainActivity extends AppCompatActivity {
             int id = menuItem.getItemId();
             switch (id) {
                 case R.id.nav_home:
-                    Toast.makeText(MainActivity.this, "Pressed home", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "Pressed home", Toast.LENGTH_SHORT).show();
                     selectedFragment = new HomeFragment();
                     break;
                 case R.id.nav_alarm:
-                    Toast.makeText(MainActivity.this, "Pressed alarm", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "Pressed alarm", Toast.LENGTH_SHORT).show();
                     selectedFragment = new AlarmFragment();
                     break;
                 case R.id.nav_joke:
-                    Toast.makeText(MainActivity.this, "Pressed joke", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "Pressed joke", Toast.LENGTH_SHORT).show();
                     selectedFragment = new JokeFragment();
                     break;
                 case R.id.nav_settings:
-                    Toast.makeText(MainActivity.this, "Pressed settings", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "Pressed settings", Toast.LENGTH_SHORT).show();
                     selectedFragment = new SettingsFragment();
                     break;
                 default:

@@ -15,16 +15,17 @@
         />
 
     <Switch
+        android:id="@+id/alarm_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/title"
+        android:layout_alignRight="@id/title"
         android:layout_alignBaseline="@+id/title"/>
 
     <TimePicker
-        android:id="@+id/time_picker"
+        android:id="@+id/alarm_time_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
+        android:layout_below="@id/title"
         android:timePickerMode="spinner"
         android:layout_centerHorizontal="true"/>
 
@@ -32,7 +33,7 @@
         android:id="@+id/weekdays"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/time_picker"
+        android:layout_below="@id/alarm_time_picker"
         android:layout_marginVertical="20dp">
 
         <ImageView
@@ -78,6 +79,7 @@
         android:layout_below="@id/weekdays">
 
         <CheckBox
+            android:id="@+id/make_coffee_cb"
             android:layout_width="40dp"
             android:layout_height="40dp"/>
 

@@ -18,25 +18,25 @@ import java.util.TimerTask;
 
 public class HomeFragment extends Fragment {
 
-    TextView timeTV;
-    Timer timer;
+    private TextView timeTV;
+    private Timer timer;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //First inflate fragment, only then find time textView
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
         //Find time on main screen and start update thread
         timeTV = view.findViewById(R.id.time);
         setTime();
-
+        //Start scheduled thread to update clock
         timer = new Timer();
-
         startClockThread();
 
         return view;
     }
+
+
 
 
     @Override
@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-
+                        setTime();
                     }
                 });
 
