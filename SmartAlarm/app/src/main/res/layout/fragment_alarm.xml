@@ -34,41 +34,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/alarm_time_picker"
-        android:layout_marginVertical="20dp">
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        >
 
         <ImageView
             android:id="@+id/monday"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/monday_icon"
-            android:layout_marginHorizontal="10dp"/>
+            android:layout_marginHorizontal="5dp"/>
 
         <ImageView
             android:id="@+id/tuesday"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/tuesday_icon"
-            android:layout_marginHorizontal="10dp"/>
+            android:layout_marginHorizontal="5dp"/>
 
         <ImageView
             android:id="@+id/wednesday"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/wednesday_icon"
-            android:layout_marginHorizontal="10dp"/>
+            android:layout_marginHorizontal="5dp"/>
 
         <ImageView
             android:id="@+id/thursday"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/thursday_icon"
-            android:layout_marginHorizontal="10dp"/>
+            android:layout_marginHorizontal="5dp"/>
         <ImageView
             android:id="@+id/friday"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/friday_icon"
-            android:layout_marginHorizontal="10dp"/>
+            android:layout_marginHorizontal="5dp"/>
 
     </LinearLayout>
 
