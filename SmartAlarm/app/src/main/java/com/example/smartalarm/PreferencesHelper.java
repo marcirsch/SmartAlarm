@@ -12,6 +12,7 @@ public class PreferencesHelper {
     public static final String ALARM_TIME_MINUTES = "alarmTimeMinutes";
     public static final String ALARM_SWITCH = "alarmSwitch";
     public static final String ALARM_COFFEE_CHECKBOX = "alarmCoffeeCheckBox";
+    public static final String SWITCH_IP_ADDRESS = "switchIpAddress";
 
     private Context context;
 
@@ -88,6 +89,14 @@ public class PreferencesHelper {
 
     public static boolean getAlarmCoffeeSwitch(Context context){
         return (boolean)get(context, ALARM_COFFEE_CHECKBOX, false);
+    }
+
+    public static void saveIpAddress(Context context, String address){
+        put(context, SWITCH_IP_ADDRESS, address);
+    }
+
+    public static String getIpAddress(Context context){
+        return (String)get(context, SWITCH_IP_ADDRESS, "boo");
     }
 
 
